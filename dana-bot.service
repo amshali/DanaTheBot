@@ -5,7 +5,7 @@ After=docker.target
 [Service]
 User=ubuntu
 WorkingDirectory=/home/ubuntu/
-ExecStart=docker run -t --rm -v /home/ubuntu/.config/dana-bot:/etc/dana --name data-bot amshali/dana-bot
+ExecStart=docker run -t --rm -v /home/ubuntu/.config/dana-bot:/etc/dana --name data-bot dana-bot:latest
 ExecStop=docker stop data-bot
 Restart=always
 RestartSec=5
