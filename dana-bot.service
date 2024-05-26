@@ -1,0 +1,15 @@
+[Unit]
+Description=Dana Telegram Bot
+After=docker.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/
+ExecStart=docker run -t --rm -v /home/ubuntu/.config/dana-bot:/etc/dana --name data-bot amshali/dana-bot
+ExecStop=docker stop data-bot
+Restart=always
+RestartSec=5
+SyslogIdentifier=dana_bot
+
+[Install]
+WantedBy=multi-user.target

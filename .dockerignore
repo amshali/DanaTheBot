@@ -1,0 +1,7 @@
+.venv
+build
+dist
+tests
+*.env
+*.session
+__pycache__
